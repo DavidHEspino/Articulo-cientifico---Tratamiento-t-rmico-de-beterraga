@@ -1,0 +1,266 @@
+
+%% Commands for TeXCount
+%TC:macro \cite [option:text,text]
+%TC:macro \citep [option:text,text]
+%TC:macro \citet [option:text,text]
+%TC:envir table 0 1
+%TC:envir table* 0 1
+%TC:envir tabular [ignore] word
+%TC:envir displaymath 0 word
+%TC:envir math 0 word
+%TC:envir comment 0 0
+%%
+
+%%
+\documentclass[manuscript,screen,review]{acmart}
+%%
+% Este bloque define el comando \BibTeX para escribir "BibTeX" con el formato correcto.
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    Bib\TeX}}}
+% Comandos para establecer derechos de autor y metadatos de publicación ACM:
+% - \setcopyright{acmlicensed}  % Tipo de licencia (consultar el valor correcto con ACM)
+% - \copyrightyear{2018}        % Año de copyright (año de publicación)
+% - \acmYear{2018}              % Año de la conferencia o revista ACM
+% - \acmDOI{XXXXXXX.XXXXXXX}    % DOI oficial del artículo (asignado por ACM)
+% Estos comandos deben incluirse en artículos originales para ACM (conferencia o revista).
+% Sirven para establecer metadatos de publicación y derechos de autor desde el primer envío.
+\acmConference[Conference acronym 'XX]{Make sure to enter the correct
+  conference title from your rights confirmation email}{June 03--05,
+  2018}{Woodstock, NY}
+%%
+%%  Uncomment \acmBooktitle if the title of the proceedings is different
+%%  from ``Proceedings of ...''!
+%%
+%%\acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection,
+%%  June 03--05, 2018, Woodstock, NY}
+\acmISBN{978-1-4503-XXXX-X/2018/06}
+
+%%
+%% ID de envío.
+%% Usa este comando cuando envíes un artículo a un evento patrocinado.
+%% Recibirás un ID único de envío por parte de los organizadores
+%% del evento, y este ID debe usarse como parámetro en este comando.
+%%\acmSubmissionID{123-A56-BU3}
+
+%%
+%% Para gestionar citas y bibliografía, se recomienda usar archivos
+%% de bibliografía en formato BibTeX.
+%%
+%% Puedes usar BibTeX con el estilo ACM-Reference-Format,
+%% o BibLaTeX con los estilos acmnumeric o acmauthoryear,
+%% que incluyen soporte avanzado para citar software mediante
+%% el paquete biblatex-software, también disponible por separado en CTAN.
+%%
+%% Consulta los archivos sample-*-biblatex.tex como plantillas que muestran
+%% los estilos biblatex.
+%%
+
+%%
+%% La mayoría de publicaciones de ACM usan citas y referencias numeradas.
+%% El comando \citestyle{authoryear} cambia al estilo "autor-año".
+%%
+%% Si preparas contenido para un evento patrocinado por ACM SIGGRAPH,
+%% debes usar el estilo "autor-año" para las citas y referencias.
+%% Si descomentas el siguiente comando, activarás ese estilo.
+%%\citestyle{acmauthoryear}
+
+
+%%
+%% end of the preamble, start of the body of the document source.
+\begin{document}
+
+%% El comando "title" tiene un parámetro opcional,
+%% que permite definir un "título corto" para los encabezados de página.
+\title{Tratamiento térmico de beterraga (Beta vulgaris) y calidad sensorial-fisicoquímica de chocotejas con quinua y kiwicha pop.}
+%%
+%% Los comandos "author" y relacionados definen los autores y sus afiliaciones.
+%% Se destaca la afiliación compartida de los dos primeros autores y el uso de
+%% "authornote" y "authornotemark" para indicar contribución compartida.
+\author{Espino Curi, David Helcias}
+\orcid{0000-0002-1234-5678}
+\email{david.espino.19@unsch.edu.pe}
+\affiliation{%
+  \institution{Universidad Nacional San Cristóbal de Huamanga}
+  \city{Ayacucho}
+  \country{Perú}
+}
+\author{Delgado Rojas, Katherine Gloria}
+\affiliation{%
+  \institution{Universidad Nacional San Cristóbal de Huamanga}
+  \city{Ayacucho}
+  \country{Perú}
+}
+\author{Pomahuacre Amao, Luis Enrique}
+\affiliation{%
+  \institution{Universidad Nacional San Cristóbal de Huamanga}
+  \city{Ayacucho}
+  \country{Perú}
+}
+\author{Tinco De la Cruz, Stephany}
+\affiliation{%
+  \institution{Universidad Nacional San Cristóbal de Huamanga}
+  \city{Ayacucho}
+  \country{Perú}
+}
+\author{Huaman Bonifacio, Ruth Cynthia}
+\affiliation{%
+  \institution{Universidad Nacional San Cristóbal de Huamanga}
+  \city{Ayacucho}
+  \country{Perú}
+}
+\author{Pillaca Medina, Edith Susan}
+\affiliation{%
+  \institution{Universidad Nacional San Cristóbal de Huamanga}
+  \city{Ayacucho}
+  \country{Perú}
+}
+%%
+%% Por defecto, la lista completa de autores aparece en los encabezados de página.
+%% Si la lista es muy larga y ocupa demasiado espacio, este comando permite
+%% definir una versión abreviada para los encabezados.
+\renewcommand{\shortauthors}{Espino Curi et al.}
+%%
+%% El resumen (abstract) es una síntesis breve del trabajo presentado en el artículo.
+\begin{abstract}
+   Se pone el resumen de l investigación.
+\end{abstract}
+
+%%
+%% El siguiente bloque fue generado en base a los conceptos ACM más cercanos al área de Ciencia y Tecnología de Alimentos y Productos Funcionales.
+%%
+\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10010405.10010469.10010470</concept_id>
+  <concept_desc>Applied computing~Food science</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10002950.10003648.10003662.10003665</concept_id>
+  <concept_desc>Mathematics of computing~Statistical paradigms</concept_desc>
+  <concept_significance>300</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010405.10010444.10010449</concept_id>
+  <concept_desc>Applied computing~Consumer products</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+</ccs2012>
+\end{CCSXML}
+\ccsdesc[500]{Applied computing~Food science}
+\ccsdesc[300]{Mathematics of computing~Statistical paradigms}
+\ccsdesc[100]{Applied computing~Consumer products}
+%%
+%% Palabras clave. Elige palabras que describan tu investigación.
+%% Por ejemplo:
+\keywords{Functional foods, confectionery, sensory evaluation, quinoa, kiwicha, beetroot, food technology, physicochemical properties}
+\received{21 June 2025}
+\received[revised]{}
+\received[accepted]{}
+%%
+\maketitle
+%%
+\section{Introducción}
+La remolacha o beterraga (\textit{Beta vulgaris} L.) constituye una raíz de notable interés en la industria alimentaria y en la investigación nutracéutica debido a su elevado contenido de compuestos bioactivos como betalainas, nitratos y polifenoles, los cuales han sido asociados con beneficios cardiovasculares, antioxidantes y antiinflamatorios \cite{Clifford2021,Siervo2016,WoottonBeard2011}. Entre estos compuestos, las betalainas no sólo confieren el característico color rojo intenso, sino que también actúan como potentes agentes antioxidantes con aplicaciones potenciales como colorantes naturales y componentes especializados en productos alimenticios \cite{Neelwarne2013,Montoya2011}. Estudios recientes han documentado que la aplicación de tratamientos térmicos a la remolacha puede inducir pérdidas parciales de estos pigmentos, modificar la actividad antioxidante y alterar parámetros tecnológicos críticos como la humedad y la textura, dependiendo de la duración y temperatura del proceso \cite{ArrudaRamos2017,Montoya2011}.
+
+Por otro lado, los pseudocereales andinos quinua (\textit{Chenopodium quinoa}) y kiwicha (\textit{Amaranthus spp.}) se han consolidado como ingredientes estratégicos en el desarrollo de alimentos innovadores, dada su composición nutricional que combina proteínas de alto valor biológico, fibra dietaria, vitaminas y minerales \cite{RepoCarrascoValencia2009,Singh2023}. La incorporación de estos pseudocereales en su forma expandida (\textit{pop}) en matrices de confitería permite mejorar la textura y reducir la densidad aparente, contribuyendo a la diferenciación sensorial y a la percepción de valor agregado en los consumidores. No obstante, la literatura disponible se ha centrado principalmente en estudios composicionales o en aplicaciones independientes de cada ingrediente, por lo que persisten vacíos relevantes sobre la influencia combinada del tiempo de cocción de la beterraga en la calidad fisicoquímica y sensorial de productos que integren estos pseudocereales.
+
+El presente estudio se planteó con el propósito de evaluar el efecto de tres tiempos de cocción (0, 20 y 40 minutos) de la beterraga sobre propiedades fisicoquímicas (humedad, actividad de agua, pH, densidad) y sensoriales (apariencia, aroma, sabor, textura y aceptabilidad global) de chocotejas especializadas elaboradas con quinua y kiwicha \textit{pop}. Este enfoque busca aportar evidencia que contribuya a optimizar el desarrollo de confitería diferenciada con ingredientes naturales, atendiendo simultáneamente la calidad tecnológica y la percepción del consumidor.
+
+\section{Materiales y Métodos}
+
+\subsection{Materia prima y suministros}
+Se empleó beterraga (\textit{Beta vulgaris} L.) adquirida en el mercado local de Ayacucho (Perú), seleccionando raíces frescas, sanas y libres de daños mecánicos. Como ingredientes de cobertura, se utilizó chocolate bitter al 55\% de cacao (marca comercial), mientras que la fase interna de crocancia se elaboró con quinua pop y kiwicha pop adquiridas a proveedores locales certificados. Los insumos fueron almacenados en condiciones ambientales controladas (22--25\,\textdegree C; humedad relativa 50--60\%) hasta su uso.
+
+\subsection{Diseño experimental}
+Se aplicó un diseño completamente al azar con tres tratamientos correspondientes al tiempo de cocción de la beterraga: T0 (0 min, cruda), T1 (20 min), y T2 (40 min). Cada tratamiento se elaboró en un lote independiente de 24 unidades, de las cuales se seleccionaron aleatoriamente cuatro chocotejas para análisis fisicoquímico y sensorial.
+
+\subsection{Procedimiento de elaboración}
+El proceso se desarrolló según el siguiente flujograma para chocotejas:
+
+\begin{center}
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tikzpicture}[node distance=1.5cm]
+    % Cobertura de chocolate
+    \node (start) [process] {Recepción y selección de materia prima};
+    \node (fundido) [process, below of=start] {Fundido y atemperado del chocolate (45 °C, luego 27 °C y 31 °C)};
+    \node (mezcla) [process, below of=fundido] {Mezclado con kiwicha pop};
+    \node (moldeado) [process, below of=mezcla] {Moldeado y vibrado};
+    \node (enfriado) [process, below of=moldeado] {Pre-enfriamiento (12 °C) y desmoldado};
+    \draw [arrow] (start) -- (fundido);
+    \draw [arrow] (fundido) -- (mezcla);
+    \draw [arrow] (mezcla) -- (moldeado);
+    \draw [arrow] (moldeado) -- (enfriado);
+\end{tikzpicture}
+\captionof{figure}{Cobertura de chocolate}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tikzpicture}[node distance=1.5cm]
+    % Relleno
+    \node (start) [process] {Recepción y selección de materia prima};
+    \node (lavado) [process, below of=start] {Lavado y desinfección};
+    \node (coccion) [process, below of=lavado] {Tratamiento térmico: 0, 20 o 40 min};
+    \node (enfriado) [process, below of=coccion] {Enfriamiento rápido};
+    \node (rallado) [process, below of=enfriado] {Rallado longitudinal (2 mm)};
+    \node (deshidratado) [process, below of=rallado] {Deshidratado parcial (60 °C)};
+    \node (mezclado) [process, below of=deshidratado] {Mezclado con quinua pop};
+    \node (enrobado) [process, below of=mezclado] {Incorporación en la cobertura de chocolate};
+    \draw [arrow] (start) -- (lavado);
+    \draw [arrow] (lavado) -- (coccion);
+    \draw [arrow] (coccion) -- (enfriado);
+    \draw [arrow] (enfriado) -- (rallado);
+    \draw [arrow] (rallado) -- (deshidratado);
+    \draw [arrow] (deshidratado) -- (mezclado);
+    \draw [arrow] (mezclado) -- (enrobado);
+\end{tikzpicture}
+\captionof{figure}{Relleno funcional}
+\end{minipage}
+\end{center}
+
+
+
+\subsection{Variables}
+La variable independiente fue el tiempo de cocción de la beterraga (0, 20 y 40 minutos). Las variables dependientes fueron: humedad (\%), actividad de agua (\textit{a\textsubscript{w}}), pH, densidad (g/cm\textsuperscript{3}) y parámetros sensoriales (apariencia, aroma, sabor, textura y aceptabilidad global).
+
+\subsection{Operacionalización de variables}
+\begin{table}[h]
+\centering
+\caption{Dimensiones e indicadores de las variables estudiadas}
+\begin{tabular}{lll}
+\hline
+\textbf{Variable} & \textbf{Indicador} & \textbf{Unidad de medida} \\
+\hline
+Humedad & Contenido de agua & \% \\
+Actividad de agua & Valor \textit{a\textsubscript{w}} & -- \\
+pH & pH medido & -- \\
+Densidad & Peso / volumen & g/cm$^3$ \\
+Apariencia & Escala hedónica (1--9) & puntos \\
+Aroma & Escala hedónica (1--9) & puntos \\
+Sabor & Escala hedónica (1--9) & puntos \\
+Textura & Escala hedónica (1--9) & puntos \\
+Aceptabilidad global & Escala hedónica (1--9) & puntos \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Análisis fisicoquímico}
+El porcentaje de humedad se determinó mediante secado en estufa a 105\,\textdegree C hasta peso constante (AOAC 925.10). La actividad de agua se midió con un higrómetro AquaLab (modelo Serie 4TE). El pH se evaluó en homogenato 10\% con un potenciómetro digital calibrado. La densidad se obtuvo a partir de la relación masa/volumen de las muestras. Todos los análisis se realizaron por triplicado.
+
+\subsection{Evaluación sensorial}
+La aceptación sensorial se realizó con un panel no entrenado de 20 jueces voluntarios, empleando una escala hedónica de 9 puntos, donde 1 correspondía a “me disgusta extremadamente” y 9 a “me gusta extremadamente”. Los atributos evaluados fueron apariencia, aroma, sabor, textura y aceptabilidad global. Cada muestra se codificó con un número aleatorio y se sirvió a temperatura ambiente.
+
+\subsection{Análisis estadístico}
+Los datos fueron procesados mediante análisis de varianza (ANOVA) de un factor. La comparación de medias se realizó con el test de Tukey (p < 0.05). Se utilizó el software estadístico SPSS versión 25.0.
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{sample-base}
+\end{document}
+

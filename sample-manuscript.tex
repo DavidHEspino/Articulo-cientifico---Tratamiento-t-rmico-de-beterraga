@@ -12,6 +12,7 @@
 %%
 
 %%
+\PassOptionsToPackage{prologue}{xcolor}
 \documentclass[manuscript,screen,review]{acmart}
 %%
 % Este bloque define el comando \BibTeX para escribir "BibTeX" con el formato correcto.
@@ -36,6 +37,8 @@
 %%  June 03--05, 2018, Woodstock, NY}
 \acmISBN{978-1-4503-XXXX-X/2018/06}
 
+\captionsetup{hypcap=false}
+\setlength{\headheight}{21pt}
 %%
 %% ID de envío.
 %% Usa este comando cuando envíes un artículo a un evento patrocinado.
@@ -77,7 +80,7 @@
 %% Los comandos "author" y relacionados definen los autores y sus afiliaciones.
 %% Se destaca la afiliación compartida de los dos primeros autores y el uso de
 %% "authornote" y "authornotemark" para indicar contribución compartida.
-\author{Espino Curi, David Helcias}
+\author{David Helcias Espino Curi}
 \orcid{0000-0002-1234-5678}
 \email{david.espino.19@unsch.edu.pe}
 \affiliation{%
@@ -85,31 +88,31 @@
   \city{Ayacucho}
   \country{Perú}
 }
-\author{Delgado Rojas, Katherine Gloria}
+\author{Katherine Gloria Delgado Rojas}
 \affiliation{%
   \institution{Universidad Nacional San Cristóbal de Huamanga}
   \city{Ayacucho}
   \country{Perú}
 }
-\author{Pomahuacre Amao, Luis Enrique}
+\author{Luis Enrique Pomahuacre Amao}
 \affiliation{%
   \institution{Universidad Nacional San Cristóbal de Huamanga}
   \city{Ayacucho}
   \country{Perú}
 }
-\author{Tinco De la Cruz, Stephany}
+\author{Stephany Tinco De la Cruz}
 \affiliation{%
   \institution{Universidad Nacional San Cristóbal de Huamanga}
   \city{Ayacucho}
   \country{Perú}
 }
-\author{Huaman Bonifacio, Ruth Cynthia}
+\author{Ruth Cynthia Huaman Bonifacio}
 \affiliation{%
   \institution{Universidad Nacional San Cristóbal de Huamanga}
   \city{Ayacucho}
   \country{Perú}
 }
-\author{Pillaca Medina, Edith Susan}
+\author{Edith Susan Pillaca Medina}
 \affiliation{%
   \institution{Universidad Nacional San Cristóbal de Huamanga}
   \city{Ayacucho}
@@ -227,7 +230,7 @@ El proceso se desarrolló según el siguiente flujograma para chocotejas:
 La variable independiente fue el tiempo de cocción de la beterraga (0, 20 y 40 minutos). Las variables dependientes fueron: humedad (\%), actividad de agua (\textit{a\textsubscript{w}}), pH, densidad (g/cm\textsuperscript{3}) y parámetros sensoriales (apariencia, aroma, sabor, textura y aceptabilidad global).
 
 \subsection{Operacionalización de variables}
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \caption{Dimensiones e indicadores de las variables estudiadas}
 \begin{tabular}{lll}
@@ -259,8 +262,12 @@ Los datos fueron procesados mediante análisis de varianza (ANOVA) de un factor.
 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
-
+% Restore sectioning commands
+\makeatletter
+\let\section\ACM@origsection
+\let\subsection\ACM@origsubsection
+\let\subsubsection\ACM@origsubsubsection
+\makeatother
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{sample-base}
 \end{document}
-

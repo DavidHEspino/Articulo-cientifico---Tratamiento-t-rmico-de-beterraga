@@ -675,7 +675,8 @@
        \immediate\write\@auxout{\string\bibstyle{#1}}%
      \fi}}
 \RequirePackage{graphicx}
-\RequirePackage[prologue]{xcolor}
+\PassOptionsToPackage{prologue}{xcolor}
+\RequirePackage{xcolor}
 \definecolor[named]{ACMBlue}{cmyk}{1,0.1,0,0.1}
 \definecolor[named]{ACMYellow}{cmyk}{0,0.16,1,0}
 \definecolor[named]{ACMOrange}{cmyk}{0,0.42,1,0.01}

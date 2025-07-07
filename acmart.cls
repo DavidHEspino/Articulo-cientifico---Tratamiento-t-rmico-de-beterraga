@@ -3535,7 +3535,9 @@ Permiso para realizar copias digitales o impresas de todo o parte de este trabaj
 \usepackage{graphicx}
 \usepackage{subfig}
 
-
+\usepackage{subcaption}
+\usepackage{graphicx}
+% ... (resto del preámbulo)
 
 
 \endinput

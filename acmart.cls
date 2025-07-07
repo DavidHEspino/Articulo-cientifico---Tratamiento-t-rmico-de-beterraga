@@ -2037,131 +2037,21 @@
 \def\@formatdoi#1{\url{https://doi.org/#1}}
 \def\@copyrightpermission{%
   \ifcase\acm@copyrightmode\relax % none
-  \or % acmcopyright
-   Permission to make digital or hard copies of all or part of this
-   work for personal or classroom use is granted without fee provided
-   that copies are not made or distributed for profit or commercial
-   advantage and that copies bear this notice and the full citation on
-   the first page. Copyrights for components of this work owned by
-   others than ACM must be honored. Abstracting with credit is
-   permitted. To copy otherwise, or republish, to post on servers or
-   to redistribute to lists, requires prior specific permission
-   and\hspace*{.5pt}/or
-   a fee. Request permissions from permissions@acm.org.
-  \or % acmlicensed
-   Permission to make digital or hard copies of all or part of this
-   work for personal or classroom use is granted without fee provided
-   that copies are not made or distributed for profit or commercial
-   advantage and that copies bear this notice and the full citation on
-   the first page. Copyrights for components of this work owned by
-   others than the author(s) must be honored. Abstracting with credit
-   is permitted. To copy otherwise, or republish, to post on servers
-   or to redistribute to lists, requires prior specific permission
-   and\hspace*{.5pt}/or a fee. Request permissions from
-   permissions@acm.org.
-  \or % rightsretained
-   Permission to make digital or hard copies of all or part of this
-   work for personal or classroom use is granted without fee provided
-   that copies are not made or distributed for profit or commercial
-   advantage and that copies bear this notice and the full citation on
-   the first page. Copyrights for third-party components of this work
-   must be honored. For all other uses, contact the
-   owner\hspace*{.5pt}/author(s).
-  \or % usgov
-   This paper is authored by an employee(s) of the United States
-   Government and is in the public domain. Non-exclusive copying or
-   redistribution is allowed, provided that the article citation is
-   given and the authors and agency are clearly identified as its
-   source. Request permissions from
-   owner\hspace*{.5pt}/author(s).
-  \or % usgovmixed
-   ACM acknowledges that this contribution was authored or co-authored
-   by an employee, contractor, or affiliate of the United States
-   government. As such, the United States government retains a
-   nonexclusive, royalty-free right to publish or reproduce this
-   article, or to allow others to do so, for government purposes
-   only. Request permissions from owner\hspace*{.5pt}/author(s).
-  \or % cagov
-   This article was authored by employees of the Government of
-   Canada. As such, the Canadian government retains all interest in
-   the copyright to this work and grants to ACM a nonexclusive,
-   royalty-free right to publish or reproduce this article, or to
-   allow others to do so, provided that clear attribution is given
-   both to the authors and the Canadian government agency employing
-   them. Permission to make digital or hard copies for personal or
-   classroom use is granted. Copies must bear this notice and the full
-   citation on the first page. Copyrights for components of this work
-   owned by others than the Canadian Government must be honored. To
-   copy otherwise, distribute, republish, or post, requires prior
-   specific permission and/or a fee. Request permissions from
-   owner\hspace*{.5pt}/author(s).
-  \or % cagovmixed
-   ACM acknowledges that this contribution was co-authored by an
-   affiliate of the national government of Canada. As such, the Crown
-   in Right of Canada retains an equal interest in the
-   copyright. Reprints must include clear attribution to ACM and the
-   author’s government agency affiliation. Permission to make digital
-   or hard copies for personal or classroom use is granted. Copies
-   must bear this notice and the full citation on the first
-   page. Copyrights for components of this work owned by others than
-   ACM must be honored. To copy otherwise, distribute, republish, or
-   post, requires prior specific permission and/or a fee. Request
-   permissions from owner\hspace*{.5pt}/author(s).
-  \or % licensedusgovmixed
-   Publication rights licensed to ACM\@. ACM acknowledges that this
-   contribution was authored or co-authored by an employee, contractor
-   or affiliate of the United States government. As such, the
-   Government retains a nonexclusive, royalty-free right to publish or
-   reproduce this article, or to allow others to do so, for Government
-   purposes only. Request permissions from
-   owner\hspace*{.5pt}/author(s).
-  \or % licensedcagov
-   This article was authored by employees of the Government of
-   Canada. As such, the Canadian government retains all interest in
-   the copyright to this work and grants to ACM a nonexclusive,
-   royalty-free right to publish or reproduce this article, or to
-   allow others to do so, provided that clear attribution is given
-   both to the authors and the Canadian government agency employing
-   them. Permission to make digital or hard copies for personal or
-   classroom use is granted. Copies must bear this notice and the full
-   citation on the first page. Copyrights for components of this work
-   owned by others than the Canadian Government must be honored. To
-   copy otherwise, distribute, republish, or post, requires prior
-   specific permission and/or a fee. Request permissions from
-   owner\hspace*{.5pt}/author(s).
-  \or % licensedcagovmixed
-   Publication rights licensed to ACM. ACM acknowledges that this
-   contribution was authored or co-authored by an employee, contractor
-   or affiliate of the national government of Canada. As such, the
-   Government retains a nonexclusive, royalty-free right to publish or
-   reproduce this article, or to allow others to do so, for Government
-   purposes only. Request permissions from
-   owner\hspace*{.5pt}/author(s).
-  \or % othergov
-   ACM acknowledges that this contribution was authored or co-authored
-   by an employee, contractor or affiliate of a national
-   government. As such, the Government retains a nonexclusive,
-   royalty-free right to publish or reproduce this article, or to
-   allow others to do so, for Government purposes only. Request
-   permissions from owner\hspace*{.5pt}/author(s).
-  \or % licensedothergov
-   Publication rights licensed to ACM\@. ACM acknowledges that this
-   contribution was authored or co-authored by an employee, contractor
-   or affiliate of a national government. As such, the Government
-   retains a nonexclusive, royalty-free right to publish or reproduce
-   this article, or to allow others to do so, for Government purposes
-   only. Request permissions from owner\hspace*{.5pt}/author(s).
- \or % iw3c2w3
-   This paper is published under the Creative Commons Attribution~4.0
-   International (CC-BY~4.0) license. Authors reserve their rights to
-   disseminate the work on their personal and corporate Web sites with
-   the appropriate attribution.
- \or % iw3c2w3g
-   This paper is published under the Creative Commons
-   Attribution-NonCommercial-NoDerivs~4.0 International
-   (CC-BY-NC-ND~4.0) license. Authors reserve their rights to
-   disseminate the work on their personal and corporate Web sites with
-   the appropriate attribution.
+  \section*{Nota de derechos de autor}
+
+Permiso para realizar copias digitales o impresas de todo o parte de este trabajo para uso personal o en el aula se concede sin cargo, siempre que las copias no se realicen ni distribuyan con fines lucrativos o ventajas comerciales y que dichas copias incluyan este aviso y la cita completa en la primera página. Los derechos de autor sobre componentes de este trabajo que pertenezcan a terceros deben ser respetados. Se permite la inclusión en resúmenes con la debida atribución. Para copiar de otro modo, volver a publicar, alojar en servidores o redistribuir a listas, se requiere permiso específico previo y/o el pago de una tarifa. Las solicitudes de permisos deben dirigirse a:
+
+\medskip
+
+\noindent\texttt{david.espino.19@unsch.edu.pe}
+
+\medskip
+
+\noindent © 2025 Derechos de autor reservados por el autor. Derechos de publicación licenciados a ACM.
+
+\medskip
+
+\noindent Manuscrito enviado a ACM.
  \or % CC
    \IfEq{\ACM@cc@type}{zero}{%
      \def\ACM@CC@Url{https://creativecommons.org/publicdomain/zero/1.0}}{%
@@ -3301,21 +3191,7 @@
   {\normalfont\normalsize\bfseries}}
 \makeatother
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
- 
+   
   {\ACM@NRadjust{\@subsubsecfont\@adddotafter}}}
 \renewcommand\paragraph{\def\@toclevel{4}%
   \@startsection{paragraph}{4}{\parindent}%
@@ -3654,8 +3530,10 @@
 \normalsize\normalfont\frenchspacing
 
 
-
-
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18} % versión reciente
+\usepackage{graphicx}
+\usepackage{subfig}
 
 
 

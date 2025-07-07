@@ -14,6 +14,11 @@
 %%
 \PassOptionsToPackage{prologue}{xcolor}
 \documentclass[manuscript,screen,review]{acmart}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 %%
 % Este bloque define el comando \BibTeX para escribir "BibTeX" con el formato correcto.
 \AtBeginDocument{%
@@ -186,13 +191,19 @@
 %%
 \section{Introducción}
 
-   La remolacha o beterraga (\textit{Beta vulgaris} L.) es reconocida como una fuente concentrada de betalainas, nitratos y polifenoles cuyo consumo se ha relacionado con efectos vasodilatadores, actividad antioxidante y modulación antiinflamatoria \cite{Clifford2021,Siervo2016,WoottonBeard2011,Esatbeyoglu2015,Ninfali2013}.  Las betalainas, pigmentos responsables del color magenta-rojo, poseen cinética redox similar a la de compuestos fenólicos y carotenoides; sin embargo, su estabilidad depende fuertemente de la temperatura, el pH y la actividad de agua \cite{Stintzing2002,Wruss2015}.  Metaanálisis recientes destacan su potencial como sustitutos de colorantes artificiales en matrices de confitería y bebidas funcionales \cite{Neelwarne2013}.  
+   La remolacha o beterraga (\textit{Beta vulgaris} L.) es reconocida como una fuente concentrada de betalainas, nitratos y polifenoles cuyo consumo se ha relacionado con efectos vasodilatadores, actividad antioxidante y modulación antiinflamatoria \citep{Clifford2021,Siervo2016,WoottonBeard2011,Esatbeyoglu2015}%% FIXME: falta ref. Ninfali2013
+   . Las betalainas, pigmentos responsables del color magenta-rojo, poseen cinética redox similar a la de compuestos fenólicos y carotenoides; sin embargo, su estabilidad depende fuertemente de la temperatura, el pH y la actividad de agua \citep{Stintzing2002}%% FIXME: falta ref. Wruss2015
+   . Metaanálisis recientes destacan su potencial como sustitutos de colorantes artificiales en matrices de confitería y bebidas funcionales \citep{Neelwarne2013}.
 
-Los tratamientos térmicos aplicados a la beterraga provocan degradación parcial de betalainas y modificaciones de textura, pero pueden optimizarse mediante tecnologías suaves o combinadas.  Se ha documentado hasta 35 \% de pérdida de betacianinas tras ebullición convencional \cite{ArrudaRamos2017}, mientras que pretratamientos con pulsos eléctricos o secado en CO\textsubscript{2} supercrítico muestran retenciones superiores al 80 \% \cite{Nikan2019,Tomic2020}.  Otros autores reportan que las pérdidas de pigmento también dependen del gradiente térmico y del modo de transferencia de calor, hallando menor degradación en secado por vacío o liofilización frente a aire caliente \cite{Ravichandran2013,Nistor2017,Rocchetti2020}.  En snacks deshidratados, la optimización simultánea de color y crocancia ha sido alcanzada mediante fritura al vacío y control de presión de vapor \cite{Obreque2014,VieitesBarroso2023}.  
+Los tratamientos térmicos aplicados a la beterraga provocan degradación parcial de betalainas y modificaciones de textura, pero pueden optimizarse mediante tecnologías suaves o combinadas.  Se ha documentado hasta 35 \% de pérdida de betacianinas tras ebullición convencional \citep{ArrudaRamos2017}, mientras que pretratamientos con pulsos eléctricos o secado en CO\textsubscript{2} supercrítico muestran retenciones superiores al 80 \% \citep{Nikan2019,Tomic2020}.  Otros autores reportan que las pérdidas de pigmento también dependen del gradiente térmico y del modo de transferencia de calor, hallando menor degradación en secado por vacío o liofilización frente a aire caliente \citep{Ravichandran2013,Nistor2017,Rocchetti2020}.  En snacks deshidratados, la optimización simultánea de color y crocancia ha sido alcanzada mediante fritura al vacío y control de presión de vapor %% FIXME: faltan refs. Obreque2014,VieitesBarroso2023
 
-En paralelo, los pseudocereales andinos quinua (\textit{Chenopodium quinoa}) y kiwicha (\textit{Amaranthus spp.}) aportan proteínas completas, fibra soluble, tocoferoles y flavonoides \cite{RepoCarrascoValencia2009,AlvarezJubete2010,Dias2020}.  Su forma expandida (\textit{pop}) reduce la densidad aparente y confiere textura aireada; además, exhibe perfiles de antocianinas y compuestos fenólicos que potencian la capacidad antioxidante del producto final \cite{Pasko2009,Pankajan2022}.  
 
-La aplicación de pseudocereales en confitería ha mostrado efectos positivos sobre la reología y la aceptación del consumidor.  Schumacher \textit{et al.} lograron una mejora del 92 \% en aceptación hedónica de chocolates oscuros con 12–20\% de quinua \cite{Schumacher2010}, mientras que estudios recientes reportan mayores puntajes de “crujencia” y “interés visual” al incorporar crispies de quinua o amaranto en tabletas y coberturas \cite{Simbaqueba2021,Gomes2022,Delgado2019}.  
+En paralelo, los pseudocereales andinos quinua (\textit{Chenopodium quinoa}) y kiwicha (\textit{Amaranthus spp.}) aportan proteínas completas, fibra soluble, tocoferoles y flavonoides \citep{RepoCarrascoValencia2009}%% FIXME: faltan refs. AlvarezJubete2010,Dias2020
+  . Su forma expandida (\textit{pop}) reduce la densidad aparente y confiere textura aireada; además, exhibe perfiles de antocianinas y compuestos fenólicos que potencian la capacidad antioxidante del producto final \citep{Pasko2009}%% FIXME: falta ref. Pankajan2022
+  .
+
+La aplicación de pseudocereales en confitería ha mostrado efectos positivos sobre la reología y la aceptación del consumidor.  Schumacher \textit{et al.} lograron una mejora del 92 \% en aceptación hedónica de chocolates oscuros con 12–20\% de quinua \citep{Schumacher2010}, mientras que estudios recientes reportan mayores puntajes de “crujencia” y “interés visual” al incorporar crispies de quinua o amaranto en tabletas y coberturas \citep{Gomes2022}%% FIXME: faltan refs. Simbaqueba2021,Delgado2019
+.
 
 A pesar de estos avances, existe un vacío sobre la interacción entre el tiempo de cocción de la beterraga y la calidad integradora (fisicoquímica + sensorial) de confitería que combine chocolate y pseudocereales.  Por ello, el presente trabajo evaluó tres tiempos de cocción (0, 20, 40 min) y su efecto sobre humedad, actividad de agua, pH, densidad y atributos hedónicos de chocotejas enriquecidas con quinua y kiwicha \textit{pop}, con el fin de establecer parámetros de proceso que maximicen tanto la estabilidad tecnológica como la preferencia del consumidor.
 
@@ -346,7 +357,7 @@ A pesar de estos avances, existe un vacío sobre la interacción entre el tiempo
 
 \subsection{Propiedades fisicoquímicas}
 
-El contenido de humedad disminuyó significativamente ($p < 0.05$) con el aumento del tiempo de cocción (Tabla~\ref{tab:fisico}). La muestra sin cocción (T\textsubscript{0}) presentó un contenido de humedad de 31.6\,\%, mientras que T\textsubscript{1} (20 min) y T\textsubscript{2} (40 min) registraron valores de 27.2\,\% y 26.6\,\%, respectivamente. Este comportamiento coincide con lo reportado por Arruda Ramos \textit{et al.}~\cite{ArrudaRamos2017}, quienes atribuyen la reducción de humedad a la gelatinización parcial del almidón y la pérdida de agua libre durante la cocción.
+El contenido de humedad disminuyó significativamente ($p < 0.05$) con el aumento del tiempo de cocción (Tabla~\ref{tab:fisico}). La muestra sin cocción (T\textsubscript{0}) presentó un contenido de humedad de 31.6\,\%, mientras que T\textsubscript{1} (20 min) y T\textsubscript{2} (40 min) registraron valores de 27.2\,\% y 26.6\,\%, respectivamente. Este comportamiento coincide con lo reportado por Arruda Ramos \textit{et al.}~\citep{ArrudaRamos2017}, quienes atribuyen la reducción de humedad a la gelatinización parcial del almidón y la pérdida de agua libre durante la cocción.
 
 \begin{figure}[H]
   \centering
@@ -401,7 +412,6 @@ De igual modo, la actividad de agua ($a_w$) mostró un descenso progresivo de 0.
     T\textsubscript{2} (40 min) & 26.57 $\pm$ 1.09\textsuperscript{b} & 0.75 $\pm$ 0.02\textsuperscript{b} & 949 $\pm$ 6\textsuperscript{a}   & 6.73 $\pm$ 0.01\textsuperscript{a} & 5.28 $\pm$ 0.01\textsuperscript{a} \\
     \bottomrule
   \end{tabular}
-  \vspace{2mm}
   \begin{minipage}{0.9\linewidth}
   \footnotesize
   \textbf{Nota.} Letras distintas en una misma columna indican diferencias significativas entre medias según prueba de Tukey ($p<0.05$). Por ejemplo, valores con superíndice ``a'' difieren estadísticamente de los valores con ``b''.
@@ -413,7 +423,7 @@ De igual modo, la actividad de agua ($a_w$) mostró un descenso progresivo de 0.
 
 \subsection{Evaluación sensorial}
 
-El an\'alisis sensorial (Tabla~\ref{tab:sensorial}) mostró que el tratamiento de 20 minutos (T\textsubscript{1}) obtuvo puntuaciones significativamente superiores ($p < 0.05$) en todos los atributos evaluados, alcanzando una aceptabilidad global de 8.1 $\pm$ 0.4 puntos. Los jueces describieron la textura como “muy crujiente” y el sabor equilibrado entre chocolate y beterraga. El exceso de humedad en T\textsubscript{0} disminuyó la crocancia, mientras que T\textsubscript{2} (40 min) presentó notas terrosas atribuidas a la degradación de pigmentos y formación de compuestos secundarios \cite{Montoya2011}.
+El an\'alisis sensorial (Tabla~\ref{tab:sensorial}) mostró que el tratamiento de 20 minutos (T\textsubscript{1}) obtuvo puntuaciones significativamente superiores ($p < 0.05$) en todos los atributos evaluados, alcanzando una aceptabilidad global de 8.1 $\pm$ 0.4 puntos. Los jueces describieron la textura como “muy crujiente” y el sabor equilibrado entre chocolate y beterraga. El exceso de humedad en T\textsubscript{0} disminuyó la crocancia, mientras que T\textsubscript{2} (40 min) presentó notas terrosas atribuidas a la degradación de pigmentos y formación de compuestos secundarios \citep{Montoya2011}.
 
 \begin{table}[H]
   \centering
@@ -428,7 +438,6 @@ El an\'alisis sensorial (Tabla~\ref{tab:sensorial}) mostró que el tratamiento d
     T\textsubscript{2} (40 min) & 7.0 $\pm$ 0.6\textsuperscript{b} & 6.8 $\pm$ 0.7\textsuperscript{b} & 6.9 $\pm$ 0.8\textsuperscript{b} & 7.1 $\pm$ 0.6\textsuperscript{b} & 7.0 $\pm$ 0.7\textsuperscript{b} \\
     \bottomrule
   \end{tabular}
-  \vspace{2mm}
   \begin{minipage}{0.9\linewidth}
   \footnotesize
   \textbf{Nota.} Letras distintas en una misma fila indican diferencias significativas entre tratamientos según prueba de Tukey ($p<0.05$). Superíndices idénticos representan ausencia de diferencia estadística.
@@ -485,9 +494,9 @@ El an\'alisis sensorial (Tabla~\ref{tab:sensorial}) mostró que el tratamiento d
 \section{Discusión}
 %=========================================================
 
-Los resultados obtenidos confirman que el \emph{tiempo de cocción} es la variable que determina, en mayor medida, la calidad fisicoquímica y sensorial de las chocotejas elaboradas con beterraga, quinua y kiwicha \textit{pop}. El descenso significativo de la humedad y de la actividad de agua en los tratamientos cocidos (T\textsubscript{1} y T\textsubscript{2}) coincide con lo descrito por Arruda Ramos \textit{et al.}~\cite{ArrudaRamos2017}, quienes atribuían estas pérdidas a la gelatinización parcial del almidón y a la disrupción de estructuras celulares durante la cocción de la remolacha. Mantener $a_\mathrm{w}$ por debajo de 0.80 —y concretamente en torno a 0.77 en T\textsubscript{1}— implica una reducción sustancial del riesgo microbiológico y, por tanto, un potencial aumento de la vida útil sin añadir conservantes químicos.
+Los resultados obtenidos confirman que el \emph{tiempo de cocción} es la variable que determina, en mayor medida, la calidad fisicoquímica y sensorial de las chocotejas elaboradas con beterraga, quinua y kiwicha \textit{pop}. El descenso significativo de la humedad y de la actividad de agua en los tratamientos cocidos (T\textsubscript{1} y T\textsubscript{2}) coincide con lo descrito por Arruda Ramos \textit{et al.}~\citep{ArrudaRamos2017}, quienes atribuían estas pérdidas a la gelatinización parcial del almidón y a la disrupción de estructuras celulares durante la cocción de la remolacha. Mantener $a_\mathrm{w}$ por debajo de 0.80 —y concretamente en torno a 0.77 en T\textsubscript{1}— implica una reducción sustancial del riesgo microbiológico y, por tanto, un potencial aumento de la vida útil sin añadir conservantes químicos.
 
-En cuanto a la densidad aparente, el valor máximo registrado en el tratamiento intermedio (955~kg\,m$^{-3}$) sugiere una compactación óptima de la matriz debida a la redistribución de la fase gas–sólido durante la cocción. Este comportamiento respalda los planteamientos de Repo-Carrasco-Valencia y Singh~\cite{RepoCarrascoValencia2009,Singh2023}, para quienes la expansión controlada de pseudocereales \textit{pop} es clave para lograr texturas ligeras y crujientes, siempre que la humedad residual sea la adecuada. La estabilidad del pH, situada entre 6.7 y 6.8 en la cobertura y 5.3–5.4 en el relleno, concuerda con lo señalado por Montoya \textit{et al.}~\cite{Montoya2011} como rango óptimo para preservar betalainas y evitar el reblandecimiento del chocolate.
+En cuanto a la densidad aparente, el valor máximo registrado en el tratamiento intermedio (955~kg\,m$^{-3}$) sugiere una compactación óptima de la matriz debida a la redistribución de la fase gas–sólido durante la cocción. Este comportamiento respalda los planteamientos de Repo-Carrasco-Valencia y Singh~\citep{RepoCarrascoValencia2009,Singh2023}, para quienes la expansión controlada de pseudocereales \textit{pop} es clave para lograr texturas ligeras y crujientes, siempre que la humedad residual sea la adecuada. La estabilidad del pH, situada entre 6.7 y 6.8 en la cobertura y 5.3–5.4 en el relleno, concuerda con lo señalado por Montoya \textit{et al.}~\citep{Montoya2011} como rango óptimo para preservar betalainas y evitar el reblandecimiento del chocolate.
 
 Desde el punto de vista sensorial, el tratamiento de 20 minutos (T\textsubscript{1}) alcanzó la mayor aceptabilidad global (8.1 ± 0.4). Esta preferencia se explica por la combinación de una humedad reducida —que evita sensación de pegajosidad— y una densidad suficiente para generar crocancia, sin llegar a producir las notas terrosas observadas en la muestra sobrecocida (T\textsubscript{2}). En términos tecnológicos, la cocción de 20 minutos permite suprimir etapas adicionales de secado, simplifica la línea de producción y reduce costos energéticos. Además, el producto resultante encaja con la tendencia de formulaciones \emph{clean label}, al lograr estabilidad con menor uso de aditivos. Todo ello, sumado al valor nutricional y la procedencia local de la quinua y la kiwicha, refuerza el potencial comercial de estas chocotejas como confitería premium de origen andino.
 
@@ -537,6 +546,10 @@ El presente estudio se limita a la evaluación inmediata; no se cuantificaron co
 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
+%% FIXME: agregar referencias faltantes:
+%% Ninfali2013, Wruss2015, Obreque2014, VieitesBarroso2023,
+%% AlvarezJubete2010, Dias2020, Pankajan2022,
+%% Simbaqueba2021, Delgado2019
 % Restore sectioning commands
 \makeatletter
 \let\section\ACM@origsection
@@ -544,5 +557,5 @@ El presente estudio se limita a la evaluación inmediata; no se cuantificaron co
 \let\subsubsection\ACM@origsubsubsection
 \makeatother
 \bibliographystyle{ACM-Reference-Format}
-\bibliography{sample-base}
+\bibliography{references}
 \end{document}
